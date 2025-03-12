@@ -5,6 +5,7 @@
       "expo-router"
     ],
     "name": "AgendaFast",
-    "slug": "AgendaFast"
+    "slug": "AgendaFast",
+    "newArchEnabled": true
   }
 }
