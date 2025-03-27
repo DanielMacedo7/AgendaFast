@@ -84,8 +84,21 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: 'justify'
 
-  }
+  },
+  dropDown: {
+    borderWidth: 1,
+    borderColor: '#87CEFA',
+    borderRadius: 5
 
+  },
+  passwordContainer: {
+    flexDirection: "row", 
+    alignItems: "center",
+    marginBottom: 15,
+  },
+  iconPasswordButton: {
+    padding: 10,
+  },
 });
 
 export default styles;
