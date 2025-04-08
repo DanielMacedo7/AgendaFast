@@ -16,7 +16,7 @@ const FooterButtons = () => {
         style={styles.footerButton}
         onPress={() => navigation.push("/registerUser")}
         >
-          <Icon name="add" size={24} color="#FFFFFF" />
+          <Icon name="done" size={24} color="#FFFFFF" />
           <Text style={styles.footerButtonText}>Cadastrar</Text>
 
         </TouchableOpacity>

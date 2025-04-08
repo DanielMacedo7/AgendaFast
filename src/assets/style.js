@@ -1,12 +1,13 @@
 import { StyleSheet } from 'react-native';
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
+    padding: 10,
   },
   header: {
     flexDirection: 'row',
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
     color: '#87CEFA',
   },
   input: {
-    width: '100%',
+    width: '50%',
     height: 50,
     borderWidth: 2,
     borderColor: '#87CEFA',
@@ -34,8 +35,19 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     backgroundColor: '#F8F8F8',
   },
+  inputDate: {
+    width: '40%',
+    height: 50,
+    borderWidth: 2,
+    borderColor: '#87CEFA',
+    borderRadius: 10,
+    paddingHorizontal: 15,
+    fontSize: 16,
+    marginBottom: 10,
+    backgroundColor: '#F8F8F8'
+  },
   button: {
-    width: '100%',
+    width: '50%',
     height: 50,
     backgroundColor: '#87CEFA', 
     justifyContent: 'center',
@@ -58,7 +70,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 30,
-    width: '100%',
+    width: '50%',
   },
   footerButton: {
     flex: 1,
@@ -86,9 +98,10 @@ const styles = StyleSheet.create({
 
   },
   dropDown: {
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: '#87CEFA',
-    borderRadius: 5
+    borderRadius: 10,
+    width: 610
 
   },
   passwordContainer: {
@@ -96,9 +109,58 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 15,
   },
-  iconPasswordButton: {
+  buttonBackRoute: {
+    backgroundColor: '#87CEFA',
+    borderRadius: 20,
     padding: 10,
+    alignSelf: 'flex-start',
   },
+  sidebar: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    width: 100,
+    backgroundColor: '#87CEFA', 
+    padding: 20,
+    zIndex: 1000
+  },
+  menuButton: {
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    paddingVertical: 15, 
+    paddingHorizontal: 18, 
+    marginBottom: 40, 
+    backgroundColor: '#0D47A1', 
+    borderRadius: 8, 
+    shadowColor: '#000', 
+    shadowOffset: { width: 0, height: 4 }, 
+    shadowOpacity: 0.3, 
+    shadowRadius: 6, 
+    elevation: 8, 
+  },
+  menuText: {
+    fontSize: 18,
+    color: '#FFFFFF', 
+    marginLeft: 10, 
+  },
+  inputSchedulling: {
+    width: '48%',
+    height: 50,
+    borderWidth: 2,
+    borderColor: '#87CEFA',
+    borderRadius: 10,
+    paddingHorizontal: 15,
+    fontSize: 16,
+    backgroundColor: '#F8F8F8',
+  },
+  containerSchedulling:{
+    flex: 1,
+    flexDirection: 'row',   
+    justifyContent: 'space-between', 
+    gap: 10,               
+    width: '100%', 
+  }
 });
 
 export default styles;

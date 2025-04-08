@@ -1,12 +1,14 @@
 import React from 'react';
 import DropDownPicker from 'react-native-dropdown-picker';
 import styles from '../../assets/style';
+import { View } from 'react-native-web';
 
 
-const ComboBoxRegisterOrganization = ({open, value, items, setOpen, setValue, placeholder}) => {
+const ComboBoxRegisterUser = ({open, value, items, setOpen, setValue, placeholder}) => {
 
-    return (
-
+    return (  
+    
+    <View style={styles.container}>    
         <DropDownPicker style={styles.dropDown}
             open={open}
             value={value}
@@ -15,8 +17,10 @@ const ComboBoxRegisterOrganization = ({open, value, items, setOpen, setValue, pl
             setValue={setValue}
             placeholder={placeholder || 'Selecione...'}                
         />
+    </View>
+
     );
 };
 
 
-export default ComboBoxRegisterOrganization;
+export default ComboBoxRegisterUser;

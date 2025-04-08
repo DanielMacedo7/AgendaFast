@@ -7,18 +7,56 @@ import ButtonEnter from "../components/login/ButtonEnter";
 import AlertaSignUp from "../components/login/AlertaSignUp";
 import FooterButtons from "../components/login/FooterButtons";
 import Footer from "../components/login/Footer";
+import { useRouter } from "expo-router";
 
 const LoginScreen = () => {
 
+const navigation = useRouter();
+
 const [login, setLogin] = useState("");
-const [password, setPassword] = useState("");
+const [senha, setSenha] = useState("");
 
 const Welcome = "Entrar";
   
-//teste
-const handleLogin = () => {
-    console.log("Login:", login, "Senha:", password);
-    alert("Login efetuado com sucesso, seja bem vindo!")
+
+const handleLogin = async () => {
+
+  const autenticacao = {
+    login: login,
+    senha: senha
+  };
+
+  try {
+    //localhost
+    //192.168.0.106:8080
+    const res = await fetch('http://localhost:8080/autenticacao/logar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(autenticacao),
+    });
+
+    const responseData = await res.json().catch(() => null);
+    
+    if (res.ok && responseData) {
+
+      if (responseData.tipo === 1) {
+
+        navigation.push("/homeScreenUser"); 
+        alert(`Login efetuado com Sucesso!`);
+
+      } else if (responseData.tipo === 2) {
+
+        navigation.push("/homeScreenCompany"); 
+        alert(`Login efetuado com Sucesso!`);
+      
+      }
+
+    } else {
+      alert(`Erro ao efetuar login: ${res.status} - Credenciais Inválidas por favor, reveja as informações digitadas.`);
+    }
+  } catch (error) {
+    console.error('Erro na requisição:', error);
+  }
 };
 
     return(
@@ -36,8 +74,8 @@ const handleLogin = () => {
         
         <InputField 
         placeholder="Senha"
-        value={password}
-        onChangeText={setPassword}
+        value={senha}
+        onChangeText={setSenha}
         secureTextEntry={true}
 
         />

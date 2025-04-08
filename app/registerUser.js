@@ -1,6 +1,6 @@
 import React from "react";
-import UserRegisterScreen from "../src/screens/UserRegisterScreen";
+import RegisterScreen from "../src/screens/RegisterScreen";
 
 export default function RegisterUserRoute() {
-  return <UserRegisterScreen />;
+  return <RegisterScreen />
 }

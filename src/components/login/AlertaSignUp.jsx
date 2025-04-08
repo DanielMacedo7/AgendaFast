@@ -8,7 +8,7 @@ const AlertaSignUp = () => {
    return (
 
     <Text style={styles.alertaSignUp}>Caso ainda não possua cadastro.{' '}
-        {'\n'}Por favor efetue-o em uma das funcionalidades abaixo!</Text>
+        {'\n'}Por favor clique no botão abaixo!</Text>
 
    );
 };
